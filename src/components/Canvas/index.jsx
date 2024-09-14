@@ -9,12 +9,12 @@ const TorusCanvas = ({ children }) => {
       <Canvas
         orthographic
         camera={{
-          position: [0, 0, 2],
+          position: [0, 0, 0],
           left: -2,
           right: 2,
           top: 2,
           bottom: -2,
-          zoom: 500,
+          zoom: 100,
         }}
       >
         {children}

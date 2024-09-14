@@ -15,6 +15,7 @@ module.exports = {
       fontFamily: {
         bebasNeue: ["var(--font-bebasNeue)"],
         highman: ["var(--font-highman)"],
+        aileron: ["var(--font-aileron)"],
       },
     },
   },

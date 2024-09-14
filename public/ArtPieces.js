@@ -1,0 +1,98 @@
+export const artPieces = [
+  {
+    url: "/images/PNGs/1.png",
+    title: "Placeholder Title",
+    year: "2024",
+    medium: "acrylic on canvas",
+  },
+  {
+    url: "/images/PNGs/2.png",
+    title: "Placeholder Title",
+    year: "2024",
+    medium: "acrylic on canvas",
+  },
+  {
+    url: "/images/PNGs/3.png",
+    title: "Placeholder Title",
+    year: "2024",
+    medium: "acrylic on canvas",
+  },
+  {
+    url: "/images/PNGs/4.png",
+    title: "Placeholder Title",
+    year: "2024",
+    medium: "acrylic on canvas",
+  },
+  {
+    url: "/images/PNGs/5.png",
+    title: "Placeholder Title",
+    year: "2024",
+    medium: "acrylic on canvas",
+  },
+  {
+    url: "/images/PNGs/6.png",
+    title: "Placeholder Title",
+    year: "2024",
+    medium: "acrylic on canvas",
+  },
+  {
+    url: "/images/PNGs/7.png",
+    title: "Placeholder Title",
+    year: "2024",
+    medium: "acrylic on canvas",
+  },
+  {
+    url: "/images/PNGs/8.png",
+    title: "Placeholder Title",
+    year: "2024",
+    medium: "acrylic on canvas",
+  },
+  {
+    url: "/images/PNGs/9.png",
+    title: "Placeholder Title",
+    year: "2024",
+    medium: "acrylic on canvas",
+  },
+  {
+    url: "/images/PNGs/10.png",
+    title: "Placeholder Title",
+    year: "2024",
+    medium: "acrylic on canvas",
+  },
+  {
+    url: "/images/PNGs/11.png",
+    title: "Placeholder Title",
+    year: "2024",
+    medium: "acrylic on canvas",
+  },
+  {
+    url: "/images/PNGs/12.png",
+    title: "Placeholder Title",
+    year: "2024",
+    medium: "acrylic on canvas",
+  },
+  {
+    url: "/images/PNGs/13.png",
+    title: "Placeholder Title",
+    year: "2024",
+    medium: "acrylic on canvas",
+  },
+  {
+    url: "/images/PNGs/14.png",
+    title: "Placeholder Title",
+    year: "2024",
+    medium: "acrylic on canvas",
+  },
+  {
+    url: "/images/PNGs/15.png",
+    title: "Placeholder Title",
+    year: "2024",
+    medium: "acrylic on canvas",
+  },
+  {
+    url: "/images/PNGs/16.png",
+    title: "Placeholder Title",
+    year: "2024",
+    medium: "acrylic on canvas",
+  },
+];

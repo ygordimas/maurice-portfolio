@@ -5,32 +5,35 @@ import Title from "@/components/Title";
 import { Canvas } from "@react-three/fiber";
 import Image from "next/image";
 import About from "@/components/About";
-import Header from "@/components/Header";
+import Navbar from "@/components/Navbar";
 import Subtitle from "@/components/Subtitle";
 import Scene from "@/components/Scene";
+import Portfolio from "@/components/Portfolio";
 
 import dynamic from "next/dynamic";
+import SlidingGallery from "@/components/SlidingGallery";
+import Exhibitions from "@/components/Exhibitions";
 
-const DynamicScene = dynamic(() => import("../components/header"), {
+const DynamicScene = dynamic(() => import("../components/Scene"), {
   loading: () => <p>Loading...</p>,
   ssr: false,
 });
 
 export default function Home() {
   return (
-    <main className="w-full h-full font-bebasNeue">
-      <Header />
-      <section className="w-screen h-screen relative  box-border">
-        <Scene />
-        <Title />
-        <Subtitle />
+    <main className="w-full h-full font-bebasNeue overflow-x-hidden">
+      <Navbar />
+      <section className="w-full h-screen relative ">
+        <DynamicScene />
       </section>
-      <section className="w-screen">
-        <About />
-      </section>
-      <section className="w-screen h-screen relative">
-        <Hero />
-      </section>
+
+      <About />
+
+      <Portfolio />
+
+      {/* <SlidingGallery  /> */}
+
+      <Exhibitions />
     </main>
   );
 }

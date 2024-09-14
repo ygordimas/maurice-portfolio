@@ -15,6 +15,11 @@ const highman = localFont({
   variable: "--font-highman",
 });
 
+const aileron = localFont({
+  src: "../../public/localfonts/Aileron-Thin.otf",
+  variable: "--font-aileron",
+});
+
 export const metadata = {
   title: "Maurice Quandus",
   description: "Maurice Quandus' Art Portfolio",
@@ -23,7 +28,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${bebasNeue.variable} ${highman.variable}`}>
+      <body
+        className={`${bebasNeue.variable} ${highman.variable} ${aileron.variable}`}
+      >
         {children}
       </body>
     </html>
