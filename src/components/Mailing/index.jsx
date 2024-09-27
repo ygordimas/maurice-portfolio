@@ -19,6 +19,7 @@ const Mailing = () => {
     <>
       <div id="contact" className="w-full px-4 md:px-40 flex flex-col mb-20 ">
         <Subtitle text="Contact" />
+
         <ContactForm />
         <div className="w-full px-4 py-4  md:px-20 md:py-20 bg-gray-200 flex justify-between relative">
           <div className="w-full   flex flex-col items-end md:items-start font-aileron">

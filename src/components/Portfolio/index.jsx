@@ -3,6 +3,7 @@ import { artPieces } from "../../../public/ArtPieces";
 import ArtTitle from "../ListedArtwork";
 import Gallery from "../Gallery";
 import Subtitle from "../Subtitle";
+import ArtworkModal from "../ArtworkModal";
 
 const Portfolio = () => {
   return (
@@ -10,6 +11,8 @@ const Portfolio = () => {
       <Subtitle text="Portfolio" />
 
       <Gallery />
+
+      <ArtworkModal />
     </div>
   );
 };

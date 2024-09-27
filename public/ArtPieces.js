@@ -212,7 +212,7 @@ export const artPieces = [
   },
   {
     url: "/images/final/demoniodisantana.jpeg",
-    title: "demoniodisantana",
+    title: "demonio di santana",
     year: "2024",
     format: "14.85x21cm (A5)",
     medium: "alcoholic markers",

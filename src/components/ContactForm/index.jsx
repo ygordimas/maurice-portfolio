@@ -38,7 +38,11 @@ const ContactForm = () => {
 
   return (
     <>
-      <div className=" w-full font-aileron md:my-20 ">
+      <div className=" w-full font-aileron md:my-10 ">
+        <p>
+          Interested in purchasing one of the artworks or simply want to reach
+          out?
+        </p>
         <form
           className="w-full flex flex-col gap-4 items-start bg-gray-200 px-4 md:px-20 py-20 md:mb-8"
           onSubmit={handleSubmit}
@@ -52,6 +56,7 @@ const ContactForm = () => {
                   name="Name"
                   id="Name"
                   value={name}
+                  required
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Your Name"
                   className="block w-full appearance-none  focus:outline-none text-xl "
@@ -69,6 +74,7 @@ const ContactForm = () => {
                   name="Email"
                   id="Email"
                   value={email}
+                  required
                   placeholder="Your E-Mail"
                   onChange={(e) => setEmail(e.target.value)}
                   className=" block w-full appearance-none  focus:outline-none text-xl "
@@ -86,6 +92,7 @@ const ContactForm = () => {
                   name="Message"
                   id="Message"
                   rows={3}
+                  required
                   placeholder="Your Message"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}

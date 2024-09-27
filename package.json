@@ -13,6 +13,7 @@
     "@react-three/drei": "^9.105.2",
     "@react-three/fiber": "^8.16.1",
     "@react-three/flex": "^1.0.1",
+    "@uidotdev/usehooks": "^2.4.1",
     "axios": "^1.7.7",
     "framer-motion": "^11.3.24",
     "leva": "^0.9.35",

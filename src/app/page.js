@@ -19,6 +19,7 @@ import ArtworkProvider from "@/context/ArtworkProvider";
 import { useState } from "react";
 import Mailing from "@/components/Mailing";
 import Footer from "@/components/Footer";
+import ArtworkModal from "@/components/ArtworkModal";
 
 const DynamicScene = dynamic(() => import("../components/Scene"), {
   loading: () => <p>Loading...</p>,
