@@ -1,17 +1,20 @@
 "use client";
 
-import React from "react";
+import React, { useState, useRef } from "react";
 import Placeholder from "../Placeholder";
+import Subtitle from "../Subtitle";
 
 const About = () => {
   const width = 30;
   return (
-    <div className="w-full h-[100vh] text-[2vh] flex justify-start items-center gap-2 relative font-aileron ">
-      <div className="h-[80vh]">
-        <div
-          className={`w-[50vw] h-min pl-40 order-9999 relative flex flex-col gap-6`}
-        >
-          <div>
+    <div
+      id="bio"
+      className="w-full min-h-[100vh] text-[2.2vh] flex justify-start items-center mt-20 gap-2 relative font-aileron px-4 md:px-0"
+    >
+      <div className="md:min-h-[80vh] ">
+        <div className="md:w-[50vw] md:min-h-[100vh] md:pl-40 relative flex flex-col gap-3 md:gap-6">
+          <Subtitle text="Biography" />
+          <div className="">
             Born in The Netherlands but with roots coming from Aruba, Maurice
             began his artistic journey in the summer of 2020 when he decided to
             move from The Netherlands to Portugal.

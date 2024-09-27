@@ -1,11 +1,7 @@
 import React from "react";
 
-const Subtitle = () => {
-  return (
-    <div className="font-aileron text-white absolute bottom-16 text-2xl left-4">
-      Visual Artist
-    </div>
-  );
+const Subtitle = ({ text }) => {
+  return <div className="font-bebasNeue text-[4vh] tracking-wider">{text}</div>;
 };
 
 export default Subtitle;

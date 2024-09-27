@@ -4,21 +4,14 @@ import {
   useEnvironment,
   useGLTF,
 } from "@react-three/drei";
-import { useFrame } from "@react-three/fiber";
+import { useFrame, useThree } from "@react-three/fiber";
 import { useControls } from "leva";
 
 const CollarHead = (props) => {
   const { nodes, materials } = useGLTF("/Collar.glb");
   const { scalingFactor } = { ...props };
-
-  // const materialProps = useControls({
-  //   thickness: { value: 0.2, min: 0, max: 3, step: 0.05 },
-  //   roughness: { value: 0, min: 0, max: 1, step: 0.1 },
-  //   transmission: { value: 1, min: 0, max: 1, step: 0.1 },
-  //   ior: { value: 1.2, min: 0, max: 3, step: 0.1 },
-  //   chromaticAberration: { value: 0.02, min: 0, max: 1 },
-  //   backside: { value: true },
-  // });
+  const { viewport } = useThree();
+  const responsiveRatio = viewport.width / 12;
 
   const transmissionProps = {
     thickness: 0.1,
@@ -44,8 +37,8 @@ const CollarHead = (props) => {
   const ref = useRef();
 
   useFrame(({ clock }) => {
-    ref.current.rotation.x = clock.getElapsedTime() * 0.3;
-    // ref.current.rotation.y = clock.getElapsedTime() * 0.2;
+    ref.current.rotation.x = clock.getElapsedTime() * 0.75;
+    // ref.current.rotation.y = clock.getElapsedTime() * 0.4;
     // ref.current.rotation.z = clock.getElapsedTime() * 0.3;
   });
   return (
@@ -54,7 +47,11 @@ const CollarHead = (props) => {
         ref={ref}
         geometry={nodes.BézierCurve.geometry}
         rotation={[0, 0, Math.PI / 2]}
-        scale={[scalingFactor, scalingFactor, scalingFactor]}
+        scale={[
+          scalingFactor * responsiveRatio,
+          scalingFactor * responsiveRatio,
+          scalingFactor * responsiveRatio,
+        ]}
       >
         {/* <meshPhongMaterial
           attach="material"

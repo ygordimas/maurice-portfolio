@@ -3,6 +3,7 @@ import React, { Suspense, useRef, useEffect } from "react";
 
 import { Canvas, useThree } from "@react-three/fiber";
 import CollarHead from "../CollarHead";
+import Head from "../Head";
 import {
   Environment,
   Text,
@@ -17,17 +18,19 @@ const Layout = () => {
   const { viewport, size } = useThree();
   const fontSize = 1;
   const letterSpacing = 0.05;
+  const isMobile = window.innerWidth < 768;
 
   return (
     <Flex
       justifyContent="center"
       flexDirection="column"
-      position={[-viewport.width / 2, viewport.height / 2, -3]}
-      size={[viewport.width, viewport.height, 0]}
+      position={[-viewport.width / 2, viewport.height / 2 - 2, -3]}
+      size={[viewport.width / 2, viewport.height / 2, 0]}
       paddingLeft={1}
       paddingRight={1}
+      className="bg-red-500"
     >
-      <Box alignSelf="flex-start" centerAnchor pl={10}>
+      <Box alignSelf="center" centerAnchor pl={10}>
         <Text
           font="localfonts/BebasNeue-Regular.ttf"
           fontSize={fontSize}
@@ -43,7 +46,7 @@ const Layout = () => {
           Maurice
         </Text>
       </Box>
-      <Box alignSelf="flex-end" centerAnchor pr={10}>
+      <Box alignSelf="center" centerAnchor pr={10}>
         <Text
           font="localfonts/BebasNeue-Regular.ttf"
           fontSize={fontSize}
@@ -68,20 +71,20 @@ const Scene = () => {
     <Canvas
       orthographic
       camera={{
-        position: [0, 0, 10],
+        position: [0, 0, 8],
         left: -2,
         right: 2,
         top: 2,
         bottom: -2,
         zoom: 100,
       }}
-      className="relative"
+      className="relative bg-gray-200"
     >
-      <directionalLight intensity={3} position={[0, 3, 2]} />
+      {/* <directionalLight intensity={0} position={[0, 1, 5]} /> */}
       <Environment preset="city" />
 
-      <Layout />
-      <CollarHead position={[-4.2, 0, 0]} scalingFactor={4} />
+      {/* <Layout /> */}
+      <Head position={[0, 0, 0]} scalingFactor={1} />
     </Canvas>
   );
 };

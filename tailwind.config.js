@@ -16,6 +16,8 @@ module.exports = {
         bebasNeue: ["var(--font-bebasNeue)"],
         highman: ["var(--font-highman)"],
         aileron: ["var(--font-aileron)"],
+        aileronHeavy: ["var(--font-aileronHeavy)"],
+        aileronSemiBold: ["var(--font-aileronSemiBold)"],
       },
     },
   },

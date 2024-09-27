@@ -5,22 +5,25 @@ import { artPieces } from "../../../public/ArtPieces";
 
 import { motion } from "framer-motion";
 import ListedArtwork from "../ListedArtwork";
+import ArtworkModal from "../ArtworkModal";
 
 const Gallery = () => {
   return (
-    <div className="flex flex-col gap-4 divide-y px-4">
-      {artPieces.map((piece, index) => {
-        return (
-          <ListedArtwork
-            title={piece.title}
-            index={index}
-            url={piece.url}
-            year={piece.year}
-            medium={piece.medium}
-          />
-        );
-      })}
-    </div>
+    <>
+      <div id="gallery" className="flex flex-col gap-4 divide-y">
+        {artPieces.map((piece, index) => {
+          return (
+            <ListedArtwork
+              title={piece.title}
+              index={index}
+              url={piece.url}
+              year={piece.year}
+              medium={piece.medium}
+            />
+          );
+        })}
+      </div>
+    </>
   );
 };
 

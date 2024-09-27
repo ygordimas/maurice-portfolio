@@ -1,3 +1,5 @@
+"use client";
+
 import TorusCanvas from "@/components/Canvas";
 import Hero from "@/components/Hero";
 import SpinningTorus from "@/components/SpinningTorus";
@@ -13,6 +15,10 @@ import Portfolio from "@/components/Portfolio";
 import dynamic from "next/dynamic";
 import SlidingGallery from "@/components/SlidingGallery";
 import Exhibitions from "@/components/Exhibitions";
+import ArtworkProvider from "@/context/ArtworkProvider";
+import { useState } from "react";
+import Mailing from "@/components/Mailing";
+import Footer from "@/components/Footer";
 
 const DynamicScene = dynamic(() => import("../components/Scene"), {
   loading: () => <p>Loading...</p>,
@@ -20,20 +26,28 @@ const DynamicScene = dynamic(() => import("../components/Scene"), {
 });
 
 export default function Home() {
+  const [displayModal, setDisplayModal] = useState(false);
+
   return (
-    <main className="w-full h-full font-bebasNeue overflow-x-hidden">
-      <Navbar />
-      <section className="w-full h-screen relative ">
-        <DynamicScene />
-      </section>
+    <ArtworkProvider>
+      <main className="w-full h-full font-bebasNeue overflow-x-hidden relative">
+        <Navbar />
+        <section className="w-full h-screen relative ">
+          <DynamicScene />
+        </section>
 
-      <About />
+        <About />
 
-      <Portfolio />
+        <Portfolio />
 
-      {/* <SlidingGallery  /> */}
+        {/* <SlidingGallery  /> */}
 
-      <Exhibitions />
-    </main>
+        <Exhibitions />
+
+        <Mailing />
+
+        <Footer />
+      </main>
+    </ArtworkProvider>
   );
 }

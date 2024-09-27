@@ -20,6 +20,16 @@ const aileron = localFont({
   variable: "--font-aileron",
 });
 
+const aileronHeavy = localFont({
+  src: "../../public/localfonts/Aileron-Heavy.otf",
+  variable: "--font-aileronHeavy",
+});
+
+const aileronSemiBold = localFont({
+  src: "../../public/localfonts/Aileron-SemiBold.otf",
+  variable: "--font-aileronSemiBold",
+});
+
 export const metadata = {
   title: "Maurice Quandus",
   description: "Maurice Quandus' Art Portfolio",
@@ -29,7 +39,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${bebasNeue.variable} ${highman.variable} ${aileron.variable}`}
+        className={`${bebasNeue.variable} ${highman.variable} ${aileron.variable} ${aileronHeavy.variable} ${aileronSemiBold.variable}`}
       >
         {children}
       </body>
