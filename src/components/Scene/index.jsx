@@ -18,7 +18,6 @@ const Layout = () => {
   const { viewport, size } = useThree();
   const fontSize = 1;
   const letterSpacing = 0.05;
-  const isMobile = window.innerWidth < 768;
 
   return (
     <Flex
@@ -67,6 +66,8 @@ const Layout = () => {
 };
 
 const Scene = () => {
+  const isMobile = window.innerWidth < 768;
+
   return (
     <Canvas
       orthographic
@@ -84,7 +85,10 @@ const Scene = () => {
       <Environment preset="city" />
 
       {/* <Layout /> */}
-      <Head position={[0, 0, 0]} scalingFactor={1} />
+      <Head
+        position={[isMobile ? -0.25 : 0, 0, 0]}
+        scalingFactor={isMobile ? 1.5 : 1}
+      />
     </Canvas>
   );
 };

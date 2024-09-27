@@ -24,6 +24,12 @@ const ListedArtwork = ({ title, index, url, year, medium, props }) => {
     setPreviewToggle(true);
   };
 
+  const formatText = (str) => {
+    if (str.length === 0) return str;
+
+    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+  };
+
   const PreviewCard = ({ url }) => {
     const x = mousePosition.x;
     const y = mousePosition.y;
@@ -55,7 +61,7 @@ const ListedArtwork = ({ title, index, url, year, medium, props }) => {
           <p className="font-aileronSemiBold">
             {index < 10 ? "0" + index : index}.
           </p>
-          <p>{title}</p>
+          <p>{formatText(title)}</p>
         </div>
         <div className="text-sm flex flex-col items-end justify-end">
           <p>{year}</p>
@@ -63,7 +69,7 @@ const ListedArtwork = ({ title, index, url, year, medium, props }) => {
         </div>
       </motion.div>
       {previewToggle && <PreviewCard url={url} />}
-      {displayModal && <ArtworkModal index={currentIndex} />}
+      {/* {displayModal && <ArtworkModal index={currentIndex} />} */}
     </>
   );
 };

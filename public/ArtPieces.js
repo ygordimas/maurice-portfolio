@@ -106,6 +106,13 @@ export const artPieces = [
     medium: "acrylic markers",
   },
   {
+    url: "/images/final/ccolorado.jpeg",
+    title: "C. Colorado",
+    year: "2024",
+    format: "50x70cm",
+    medium: "acrylic x soft wax pastels",
+  },
+  {
     url: "/images/final/journeythroughclosedeyes1.png",
     title: "Journey through closed eyes (1/4)",
     year: "2022",
@@ -246,15 +253,8 @@ export const artPieces = [
     medium: "alcoholic markers",
   },
   {
-    url: "/images/final/lagadishi1.png",
-    title: "lagadishi (1/2)",
-    year: "2024",
-    format: "14.85x21cm (A5)",
-    medium: "acrylic x oil pastels",
-  },
-  {
-    url: "/images/final/lagadishi2.png",
-    title: "lagadishi (2/2)",
+    url: "/images/final/lagadishi.jpeg",
+    title: "lagadishi",
     year: "2024",
     format: "14.85x21cm (A5)",
     medium: "acrylic x oil pastels",

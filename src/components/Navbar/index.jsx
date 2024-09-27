@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <>
       {!displayModal && (
-        <motion.nav className="fixed bg-gray-200  top-0 right-0 w-screen flex justify-end gap-4 p-2 text-2xl font-aileron z-10">
+        <motion.nav className="fixed bg-gray-200  top-0 right-0 w-screen flex justify-end gap-4 p-2 text-lg md:text-2xl font-aileron z-10">
           <div className="cursor-pointer" onClick={() => scrollToHash("bio")}>
             Bio
           </div>

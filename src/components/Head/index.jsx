@@ -30,8 +30,10 @@ export function Head(props) {
   const ref = useRef();
 
   useFrame(({ clock }) => {
-    ref.current.rotation.x = isMobile ? 0 : clock.getElapsedTime() * 0.75;
-    ref.current.rotation.y = isMobile ? clock.getElapsedTime() * 0.75 : 0;
+    ref.current.rotation.x = isMobile
+      ? clock.getElapsedTime() * -0.75
+      : clock.getElapsedTime() * 0.75;
+    // ref.current.rotation.y = isMobile ? clock.getElapsedTime() * 0.75 : 0;
     // ref.current.rotation.z = clock.getElapsedTime() * 0.3;
   });
 
