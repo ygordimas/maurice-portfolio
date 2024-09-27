@@ -26,6 +26,11 @@ const DynamicScene = dynamic(() => import("../components/Scene"), {
   ssr: false,
 });
 
+const DynamicExhibitions = dynamic(() => import("../components/Exhibitions"), {
+  loading: () => <p>Loading...</p>,
+  ssr: false,
+});
+
 export default function Home() {
   const [displayModal, setDisplayModal] = useState(false);
 
@@ -43,7 +48,7 @@ export default function Home() {
 
         {/* <SlidingGallery  /> */}
 
-        <Exhibitions />
+        <DynamicExhibitions />
 
         <Mailing />
 
