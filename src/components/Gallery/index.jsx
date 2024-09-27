@@ -14,6 +14,7 @@ const Gallery = () => {
         {artPieces.map((piece, index) => {
           return (
             <ListedArtwork
+              key={index}
               title={piece.title}
               index={index}
               url={piece.url}

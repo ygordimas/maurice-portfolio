@@ -59,13 +59,19 @@ const SlidingGallery = () => {
         dragConstraints={{ right: 0, left: -width }}
         className="flex gap-2 h-screen items-center"
       >
-        {arrayOfImages.map((image) => {
+        {arrayOfImages.map((image, index) => {
           return (
             <motion.div
+              key={image.src}
               className="h-[40rem] min-w-[30rem] p-10 relative cursor-pointer"
               onClick={() => handleImageModal(image)}
             >
-              <Image src={image.src} fill={true} className="object-cover" />
+              <Image
+                alt="Gallery image"
+                src={image.src}
+                fill={true}
+                className="object-cover"
+              />
             </motion.div>
           );
         })}
@@ -73,7 +79,12 @@ const SlidingGallery = () => {
       {modal && (
         <div className="fixed top-0 left-0 w-screen h-screen bg-red-400">
           <div className="relative h-full">
-            <Image src={imageUrl.src} fill objectFit="contain" />
+            <Image
+              alt="Gallery image"
+              src={imageUrl.src}
+              fill
+              objectFit="contain"
+            />
           </div>
         </div>
       )}

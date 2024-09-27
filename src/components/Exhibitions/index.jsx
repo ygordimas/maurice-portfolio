@@ -7,9 +7,9 @@ const Exhibitions = () => {
     <div className="min-h-screen w-full flex flex-col gap-4 justify-center px-4 md:pl-40 text-5xl">
       <div className="w-[50vw] flex flex-col gap-4 md:gap-4">
         <Subtitle text="Exhibitions" />
-        {exhibitions.map((exhibition) => {
+        {exhibitions.map((exhibition, index) => {
           return (
-            <div className="font-aileron text-[2vh]">
+            <div key={index} className="font-aileron text-[2vh]">
               <h3 className="font-aileronSemiBold tracking-wide">
                 {exhibition.title}
               </h3>
