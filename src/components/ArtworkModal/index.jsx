@@ -46,6 +46,7 @@ const ArtworkModal = () => {
               <p className="font-semibold">{current.title}</p>
               <p>{current.year}</p>
               <p>{current.medium}</p>
+              <p>{current.format}</p>
             </div>
           </motion.div>
         </motion.div>

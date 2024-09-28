@@ -162,13 +162,6 @@ export const artPieces = [
     medium: "acrylic markers",
   },
   {
-    url: "/images/final/lagadishi.png",
-    title: "lagadishi",
-    year: "2024",
-    format: "14.85x21cm (A5)",
-    medium: "acrylic markers",
-  },
-  {
     url: "/images/final/dilamapatera.png",
     title: "di lama pa tera",
     year: "2024",
