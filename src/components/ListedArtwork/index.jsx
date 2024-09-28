@@ -54,7 +54,7 @@ const ListedArtwork = ({ title, index, url, year, medium, props }) => {
       <motion.div
         onHoverStart={() => handleHover()}
         onHoverEnd={() => setPreviewToggle(false)}
-        className="font-aileron w-full text-[2.6vh] flex gap-4 cursor-pointer pt-2 justify-between"
+        className="font-aileron w-full text-xl flex gap-4 cursor-pointer pt-2 justify-between"
         onClick={() => handleClick(index)}
       >
         <div className="flex gap-4">

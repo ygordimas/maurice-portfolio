@@ -39,15 +39,15 @@ const ContactForm = () => {
   return (
     <>
       <div className=" w-full font-aileron md:my-10 ">
-        <p>
+        {/* <p>
           Interested in purchasing one of the artworks or simply want to reach
           out?
-        </p>
+        </p> */}
         <form
           className="w-full flex flex-col gap-4 items-start bg-gray-200 px-4 md:px-20 py-20 md:mb-8"
           onSubmit={handleSubmit}
         >
-          <div className=" w-full md:w-1/2 flex flex-col gap-2 text-2xl md:text-4xl ">
+          <div className=" w-full md:w-1/2 flex flex-col gap-1 text-xl ">
             <div className="">Name</div>
             <div>
               <label htmlFor="Name">
@@ -59,13 +59,13 @@ const ContactForm = () => {
                   required
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Your Name"
-                  className="block w-full appearance-none  focus:outline-none text-xl "
+                  className="block w-full appearance-none p-1 focus:outline-none text-xl placeholder:text-base"
                 />
               </label>
             </div>
           </div>
 
-          <div className="w-full md:w-1/2 flex flex-col gap-2  text-2xl md:text-4xl">
+          <div className="w-full md:w-1/2 flex flex-col gap-1  text-xl">
             <div className="">E-Mail</div>
             <div>
               <label htmlFor="Email">
@@ -77,13 +77,13 @@ const ContactForm = () => {
                   required
                   placeholder="Your E-Mail"
                   onChange={(e) => setEmail(e.target.value)}
-                  className=" block w-full appearance-none  focus:outline-none text-xl "
+                  className=" block w-full appearance-none p-1 focus:outline-none text-xl placeholder:text-base "
                 />
               </label>
             </div>
           </div>
 
-          <div className="w-full md:w-1/2 flex flex-col gap-2  text-2xl md:text-4xl">
+          <div className="w-full md:w-1/2 flex flex-col gap-1  text-xl">
             <div className="">Message</div>
             <div>
               <label htmlFor="Message">
@@ -96,7 +96,7 @@ const ContactForm = () => {
                   placeholder="Your Message"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  className="block w-full appearance-none  focus:outline-none text-xl "
+                  className="block w-full appearance-none p-1 focus:outline-none text-xl placeholder:text-base"
                 />
               </label>
             </div>

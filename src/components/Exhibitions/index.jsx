@@ -10,7 +10,7 @@ const Exhibitions = () => {
   const isDesktop = useMediaQuery("only screen and (min-width : 769px)");
 
   return (
-    <div className="min-h-screen w-full flex items-center px-4 md:pl-40 text-5xl">
+    <div className="w-full my-20 flex items-center px-4 md:px-40 text-5xl">
       <div className="md:w-[50vw] flex flex-col gap-4 md:gap-4">
         <Subtitle text="Exhibitions" />
         {exhibitions.map((exhibition, index) => {
@@ -26,13 +26,12 @@ const Exhibitions = () => {
         })}
       </div>
       {isDesktop && (
-        <div className="relative h-full w-auto">
+        <div className="relative h-[40vw] w-[40vw]">
           <Image
-            src="/images/exhibition/prisma2.jpeg"
+            src="/images/exhibition/bnw.jpg"
             alt="Prisma Gallery Exhibition 1"
-            width={1125}
-            height={2000}
-            className=" h-[40vw] w-auto"
+            fill={true}
+            style={{ objectFit: "contain" }}
           />
         </div>
       )}
