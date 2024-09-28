@@ -86,7 +86,7 @@ const Scene = () => {
 
       {/* <Layout /> */}
       <Head
-        position={[isMobile ? -0.25 : 0, 0, 0]}
+        position={[isMobile ? -0.05 : 0, 0, 0]}
         scalingFactor={isMobile ? 1.5 : 1}
       />
     </Canvas>
